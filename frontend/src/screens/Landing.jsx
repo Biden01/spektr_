@@ -29,7 +29,7 @@ const LandingScreen = ({ onLogin, onStudy, onAbout, onCenter, onCatalog, onDocs 
             {[
               { ic: 'shield', t: 'ISO 27001 защита данных' },
               { ic: 'check',  t: 'Лицензия Министерства образования РК' },
-              { ic: 'users',  t: '1 247 активных пользователей' },
+              { ic: 'users',  t: 'Корпоративная платформа НТЦ ВТС' },
             ].map((s, i) => (
               <div key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#475060', fontWeight: 500 }}>
                 <Icon name={s.ic} size={16} color="#1B4B7A"/>
@@ -171,7 +171,7 @@ const LandingScreen = ({ onLogin, onStudy, onAbout, onCenter, onCatalog, onDocs 
       <div className="s-stat-grid" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, borderTop: '1px solid #E4E8EF', borderBottom: '1px solid #E4E8EF' }}>
         {[
           { n: '5',     l: 'направлений проверки' },
-          { n: '1 247', l: 'сотрудников в системе' },
+          { n: '100+',  l: 'сотрудников в системе' },
           { n: '60+',   l: 'тестов в базе' },
           { n: '12',    l: 'видеоуроков' },
         ].map((s, i) => (

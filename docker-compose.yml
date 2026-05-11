@@ -55,7 +55,7 @@ services:
 
   frontend:
     build:
-      context: ./Spektr-app
+      context: ./frontend
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:

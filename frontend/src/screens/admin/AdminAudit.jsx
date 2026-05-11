@@ -4,11 +4,17 @@ import { Button, Card, Chip, useToast } from '../../components/Primitives.jsx';
 import AdminLayout from './AdminLayout.jsx';
 import { api } from '../../api/client.js';
 
+function toDateInput(d) {
+  return d.toISOString().slice(0, 10);
+}
+
 const AdminAuditScreen = ({ onNav, onLogout }) => {
   const { show: toast, ToastContainer } = useToast();
   const [search, setSearch] = useState('');
   const [type, setType] = useState('all');
   const [events, setEvents] = useState([]);
+  const today = toDateInput(new Date());
+  const weekAgo = toDateInput(new Date(Date.now() - 7 * 24 * 60 * 60 * 1000));
 
   useEffect(() => {
     api.get('/events?limit=200').then(setEvents).catch(console.error);
@@ -70,8 +76,8 @@ const AdminAuditScreen = ({ onNav, onLogout }) => {
           <select value={type} onChange={(e) => setType(e.target.value)} style={{ padding: '10px 12px', border: '1px solid #E4E8EF', borderRadius: 8, fontSize: 14 }}>
             {types.map(t => <option key={t.id} value={t.id}>{t.l}</option>)}
           </select>
-          <input type="date" defaultValue="2026-04-25" style={{ padding: '10px 12px', border: '1px solid #E4E8EF', borderRadius: 8, fontSize: 14 }}/>
-          <input type="date" defaultValue="2026-04-28" style={{ padding: '10px 12px', border: '1px solid #E4E8EF', borderRadius: 8, fontSize: 14 }}/>
+          <input type="date" defaultValue={weekAgo} style={{ padding: '10px 12px', border: '1px solid #E4E8EF', borderRadius: 8, fontSize: 14 }}/>
+          <input type="date" defaultValue={today} style={{ padding: '10px 12px', border: '1px solid #E4E8EF', borderRadius: 8, fontSize: 14 }}/>
         </div>
       </Card>
 

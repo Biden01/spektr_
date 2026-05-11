@@ -7,7 +7,7 @@ const LoginScreen = ({ onEnter, onBack, onForgotPassword, onRegister }) => {
   const { login } = useAuth();
   const [tab, setTab] = useState('employee');
   const [showPwd, setShowPwd] = useState(false);
-  const [idValue, setIdValue] = useState(tab === 'employee' ? '48213' : 'ivanov@vts.kz');
+  const [idValue, setIdValue] = useState('');
   const [pwdValue, setPwdValue] = useState('');
   const [idErr, setIdErr] = useState('');
   const [pwdErr, setPwdErr] = useState('');
@@ -15,7 +15,7 @@ const LoginScreen = ({ onEnter, onBack, onForgotPassword, onRegister }) => {
 
   const switchTab = (id) => {
     setTab(id);
-    setIdValue(id === 'employee' ? '48213' : 'ivanov@vts.kz');
+    setIdValue('');
     setIdErr(''); setPwdErr('');
   };
 
@@ -75,7 +75,7 @@ const LoginScreen = ({ onEnter, onBack, onForgotPassword, onRegister }) => {
           <div className="s-login-trust" style={{ display: 'flex', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
             {[
               { ic: 'shield', t: 'Защищённое соединение' },
-              { ic: 'users', t: '1 247 пользователей' },
+              { ic: 'users', t: 'НТЦ «Востоктехносервис»' },
               { ic: 'check', t: 'ISO 27001' },
             ].map((s, i) => (
               <div key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#C7DAEB', fontWeight: 500 }}>
