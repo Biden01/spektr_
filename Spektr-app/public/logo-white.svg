@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" fill="none">
+  <path d="M100 10 L15 60 L15 160 L100 110 Z" fill="#FFFFFF" opacity="0.95"></path>
+  <path d="M100 10 L100 110 L185 160 L185 60 Z" fill="#FFFFFF" opacity="0.75"></path>
+  <path d="M15 160 L100 110 L185 160 L100 210 Z" fill="#FFFFFF" opacity="0.55"></path>
+  <path d="M100 10 L100 110 M15 160 L100 110 L185 160" stroke="#1B4B7A" stroke-width="2.5" stroke-linejoin="round"></path>
+  <text x="235" y="150" font-family="Manrope, Inter, system-ui, sans-serif" font-size="110" font-weight="800" fill="#FFFFFF" letter-spacing="-1">СПЕКТР</text>
+</svg>

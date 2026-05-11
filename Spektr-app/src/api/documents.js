@@ -1,0 +1,7 @@
+import { api } from './client.js';
+
+export const listDocuments = (params = {}) => api.get('/documents', { params });
+export const getDocument = (id) => api.get(`/documents/${id}`);
+export const createDocument = (data) => api.post('/documents', data);
+export const updateDocument = (id, data) => api.put(`/documents/${id}`, data);
+export const deleteDocument = (id) => api.delete(`/documents/${id}`);
