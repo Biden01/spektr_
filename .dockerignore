@@ -1,0 +1,14 @@
+.git
+.gitignore
+*.md
+*.docx
+*.html
+*.jpeg
+*.jpg
+*.png
+__pycache__
+*.pyc
+.DS_Store
+backend/.env
+backend/*.db
+backend/uploads/
